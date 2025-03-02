@@ -19,3 +19,8 @@ function scrollToTop() {
 function toggleMenu() {
     document.querySelector(".sidebar").classList.toggle("active");
 }
+document.querySelectorAll(".sidebar a").forEach(link => {
+    link.addEventListener("click", () => {
+        document.querySelector(".sidebar").classList.remove("active");
+    });
+});
