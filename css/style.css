@@ -1,55 +1,60 @@
-*{
-  
+* {
+
     box-sizing: border-box;
-   
-      
+
+
 
 }
-body{
+
+body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    
+
 }
-:root{
-    --main-color:#c9a360;
-    --dark-color:#5b4620;
-    --bg-color:#fcf9f5;
-    --main-transition:0.5s;
+
+:root {
+    --main-color: #c9a360;
+    --dark-color: #5b4620;
+    --bg-color: #fcf9f5;
+    --main-transition: 0.5s;
 }
-.our-container{
+
+.our-container {
     margin-left: 5%;
     margin-right: 5%;
-   
-    
+
+
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
 
 
 
-        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
-        
-    
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
 
-        * {
-            font-family: 'Amiri', serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            line-height: 1.8;
-        }
 
-      
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 30px;
-        }
+* {
+    font-family: 'Amiri', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.8;
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
 /************************************************************************************** navbarbar **************************************/
-.our-navbar{
+.our-navbar {
     display: grid;
     grid-template-columns: 20% 80%;
     /* padding-top: 5px; */
@@ -62,40 +67,39 @@ html{
     width: 100%;
     height: 85px;
 }
-.our-navbar .logo{
-   
-}
-.our-navbar .logo img{
+
+.our-navbar .logo {}
+
+.our-navbar .logo img {
     width: 208px;
 }
 
-.our-navbar .links{
-    /* direction: rtl; */
-    /* display: none; */
-}
-.our-navbar .links ul{
+
+
+.our-navbar .links ul {
     display: flex;
     justify-content: space-evenly;
 }
-.our-navbar .links ul li{
+
+.our-navbar .links ul li {
     padding: 14px;
-    transition: var(--main-transition); 
+    transition: var(--main-transition);
     position: relative;
     list-style: none;
 }
-.our-navbar .links ul li a{
+
+.our-navbar .links ul li a {
     font-size: 20px;
     font-weight: bold;
-    color:white ;
+    color: white;
     z-index: 3;
     text-decoration: none;
 }
-/* .our-navbar .links ul li a.active{
-    color: var(--main-color);
-} */
-.our-navbar .links ul li a::before{
+
+
+.our-navbar .links ul li a::before {
     content: "";
-    
+
     width: 0;
     height: 100%;
     left: 0;
@@ -105,14 +109,15 @@ html{
     background-color: aqua;
     z-index: 1;
     background-color: aliceblue;
-   
+
     font-size: 25px;
     font-weight: bold;
     color: var(--main-color);
     opacity: 0.4;
-    
+
 }
-.our-navbar .links ul li a::after{
+
+.our-navbar .links ul li a::after {
     content: "";
     width: 0;
     height: 4px;
@@ -123,226 +128,186 @@ html{
     transition: var(--main-transition);
 
 }
-.our-navbar .links ul li:hover a::before ,.our-navbar .links ul li:hover a::after{
-   width: 100%;
+
+.our-navbar .links ul li:hover a::before,
+.our-navbar .links ul li:hover a::after {
+    width: 100%;
 }
-.collapse{
+
+.collapse {
     display: block;
 }
+
 /**************************************8********************************* nav **********************************/
-        /* قسم الهيدر */
-        .header {
-            text-align: center;
-            background: 
-                url('../imges/Path 32.png') no-repeat center/cover, 
-                url('../imges/Path 35.png') no-repeat center/cover;
-            color: white;
-            /* padding: 40px; */
-            margin-bottom: 30px;
-           
-            position: relative;
-        }
-        
-      
-        .header::after{
-            content: '';
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            position: absolute;
-            background-color: var(--main-color);
-        }
+/* قسم الهيدر */
+.header {
+    text-align: center;
+    background:
+        url('../imges/Path 32.png') no-repeat center/cover,
+        url('../imges/Path 35.png') no-repeat center/cover;
+    color: white;
+    /* padding: 40px; */
+    margin-bottom: 30px;
 
-    
+    position: relative;
+}
 
-        .header-content {
-            z-index: 1;
-            height: 500px;
-            width: 100%;
-        }
-        .header h3{
-            font-size: 25px;
-        }
-        .header h3.high-light{
-            background-color: var(--dark-color);
-            padding: 6px;
-            border-radius: 42px;
-            width: 40%;
-            margin: auto;
-            margin-top: 20px;
-            
-        }
-        .header h1 {
-            font-size: 3.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            margin-bottom: 20px;
-            margin-top: 10px;
-        }
-        .text-content {
-            margin-top: 77px;
-            position: absolute;
-            bottom: 30%;
-            width: 100%;
-        }
-        img.logo {
-            position: absolute;
-            top: -107px;
-            right: 0;
-            display: block;
-            width: 288px;
-        }
-        /* قسم الجوائز */
-        .awards-section {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin: 40px 0;
-        }
 
-        .award-card {
-            background: var(--bg-gold);
-            padding: 30px;
-            border: 3px solid var(--gold);
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
+.header::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: absolute;
+    background-color: var(--main-color);
+}
 
-        .award-card:hover {
-            transform: translateY(-10px);
-        }
 
-        .award-amount {
-            font-size: 3rem;
-            color: var(--main-color);
-            font-weight: bold;
-            margin: 15px 0;
-        }
 
-        /* قسم الشروط */
-        .conditions {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin: 30px 0;
-        }
+.header-content {
+    z-index: 1;
+    height: 500px;
+    width: 100%;
+}
 
-        .conditions ol {
-            padding-right: 30px;
-        }
-        .advertising {
-            text-align: center;
-            font-size: 25px;
-        }
-        .advertising h3{
-         
-        }
-        .advertising p{
-            font-size: 29px;
+.header h3 {
+    font-size: 25px;
+}
+
+.header h3.high-light {
+    background-color: var(--dark-color);
+    padding: 6px;
+    border-radius: 42px;
+    width: 40%;
+    margin: auto;
+    margin-top: 20px;
+
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.text-content {
+    margin-top: 77px;
+    position: absolute;
+    bottom: 30%;
+    width: 100%;
+}
+
+img.logo {
+    position: absolute;
+    top: -107px;
+    right: 0;
+    display: block;
+    width: 288px;
+}
+
+/* قسم الجوائز */
+.awards-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.award-card {
+    background: var(--bg-gold);
+    padding: 30px;
+    border: 3px solid var(--gold);
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.award-card:hover {
+    transform: translateY(-10px);
+}
+
+.award-amount {
+    font-size: 3rem;
+    color: var(--main-color);
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* قسم الشروط */
+.conditions {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+}
+
+.conditions ol {
+    padding-right: 30px;
+}
+
+.advertising {
+    text-align: center;
+    font-size: 25px;
+}
+
+.advertising h3 {}
+
+.advertising p {
+    font-size: 29px;
     line-height: 2;
     font-weight: 500;
     font-family: 'Amiri', serif;
 
-        }
-        .advertising p span{
-          color: var(--dark-color);
-          font-weight: bolder;
-        }
-        .advertising img{
-            width: 357px;
-            margin-top: 20px;
-        }
-        .features-section{
-            background-color: var(--bg-color);
-        }
-        .features{
-            
-        }
-        .features .ask{
-            background-color: var(--main-color);
-            padding-right: 26px;
-            border-radius: 42px;
-            margin-top: 20px;
-            color: white;
-            margin-bottom: 41px;
-            font-weight: bolder;
-            width: 39%;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            font-size: 35px;
-        }
-        .features ul{
-            margin-bottom: 20px;
-        } 
-        .features ul li{
-          /* background-color: var(--main-color); */
-          font-size: 25px;
-        } 
-        .features img{
-            width: 100%;
-            margin-top: 30px;
-        }
-        .features .chance{
-            background: linear-gradient(275deg, #5b4620, #d3ad69);
-            background-color: var(--dark-color);
-            padding: 12px;
-            text-align: center;
-            border-radius: 42px;
-            color: white;
-            width: 17%;
-            margin: auto;
-            margin-top: 20px;
-            font-size: 25px;
-            margin-bottom: 15px;
-            
-        }
-        .features h2{
-  color: var(--dark-color);
-  text-align: center;
-  font-size: 45px;
+}
 
-        }
-        .features h2.big{
-            font-size: 80px;
-            /* margin-top: 10px; */
-        }
+.advertising p span {
+    color: var(--dark-color);
+    font-weight: bolder;
+}
 
- .arbitration img{
-    width: 100%;
- }
- .princapels img{
-    width: 100%;
- }
- .offers img{
-    width: 100%;
-    margin-bottom: 60px;
- }
- .conditions img{
-    width: 100%;
- }
- .standards-conditions img{
-    width: 100%
- }
- .final-offers img{
-    width: 100%
- }
- .additional img{
-    width: 100%
- }
- .footer{
-    background-image: url('../imges/Path 130.png');
-    background-size: cover;
-    text-align: center;
+.advertising img {
+    width: 357px;
+    margin-top: 20px;
+}
+
+.features-section {
+    background-color: var(--bg-color);
+}
+
+.features {}
+
+.features .ask {
+    background-color: var(--main-color);
+    padding-right: 26px;
+    border-radius: 42px;
+    margin-top: 20px;
     color: white;
-    font-size: 37px;
- }
- .footer h3{
-    
- }
- .footer h3.showed{
+    margin-bottom: 41px;
+    font-weight: bolder;
+    width: 39%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 35px;
+}
+
+.features ul {
+    margin-bottom: 20px;
+}
+
+.features ul li {
+    font-size: 25px;
+}
+
+.features img {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.features .chance {
     background: linear-gradient(275deg, #5b4620, #d3ad69);
     background-color: var(--dark-color);
     padding: 12px;
@@ -354,270 +319,360 @@ html{
     margin-top: 20px;
     font-size: 25px;
     margin-bottom: 15px;
- }
- .footer h3.showed a{
-text-decoration: none;
-color: white;
- }
 
-        .conditions li {
-            margin: 20px 0;
-            font-size: 1.1rem;
-        }
+}
 
-        /* قسم التحكيم */
-        .judges-section {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-            margin: 50px 0;
-        }
+.features h2 {
+    color: var(--dark-color);
+    text-align: center;
+    font-size: 45px;
 
-        .judge-card {
-            text-align: center;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
+}
 
-        .judge-photo {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin: 0 auto 15px;
-            border: 3px solid var(--gold);
-        }
+.features h2.big {
+    font-size: 80px;
+}
 
-        /* قسم المشاركة */
-        .participation {
-            background: var(--main-color);
-            color: white;
-            padding: 50px;
-            border-radius: 15px;
-            text-align: center;
-            margin: 40px 0;
-        }
+.arbitration img {
+    width: 100%;
+}
 
-        .steps {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin: 30px 0;
-        }
+.princapels img {
+    width: 100%;
+}
 
-        .step-box {
-            background: rgba(255,255,255,0.1);
-            padding: 25px;
-            border-radius: 10px;
-            width: 250px;
-        }
+.offers img {
+    width: 100%;
+    margin-bottom: 60px;
+}
 
-        .step-number {
-            font-size: 2.5rem;
-            color: var(--gold);
-            margin-bottom: 15px;
-        }
+.conditions img {
+    width: 100%;
+}
 
-        /* قسم التواصل */
-        .contact-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            margin: 30px 0;
-        }
+.standards-conditions img {
+    width: 100%
+}
 
-        .social-media {
-            display: flex;
-            gap: 20px;
-        }
+.final-offers img {
+    width: 100%
+}
 
-        .social-icon {
-            width: 50px;
-            height: 50px;
-            transition: transform 0.3s;
-        }
+.additional img {
+    width: 100%
+}
 
-        .social-icon:hover {
-            transform: scale(1.2);
-        }
+.footer {
+    background-image: url('../imges/Path 130.png');
+    background-size: cover;
+    text-align: center;
+    color: white;
+    font-size: 37px;
+}
 
-        .phone-number {
-            font-size: 2rem;
-            color: var(--main-color);
-            direction: ltr;
-        }
-   
-        #scrollTopBtn {
-            position: fixed;
+.footer h3 {}
+
+.footer h3.showed {
+    background: linear-gradient(275deg, #5b4620, #d3ad69);
+    background-color: var(--dark-color);
+    padding: 12px;
+    text-align: center;
+    border-radius: 42px;
+    color: white;
+    width: 17%;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.footer h3.showed a {
+    text-decoration: none;
+    color: white;
+}
+
+.conditions li {
+    margin: 20px 0;
+    font-size: 1.1rem;
+}
+
+/* قسم التحكيم */
+.judges-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin: 50px 0;
+}
+
+.judge-card {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.judge-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 3px solid var(--gold);
+}
+
+/* قسم المشاركة */
+.participation {
+    background: var(--main-color);
+    color: white;
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 30px 0;
+}
+
+.step-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.step-number {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+/* قسم التواصل */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 30px 0;
+}
+
+.social-media {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.phone-number {
+    font-size: 2rem;
+    color: var(--main-color);
+    direction: ltr;
+}
+
+#scrollTopBtn {
+    position: fixed;
     bottom: 20px;
     right: 0;
     display: none;
     background-color: #c39f5e;
     color: white;
-    /* font-size: 33px; */
     width: 50px;
     border: none;
-    /* padding: 10px 15px; */
     font-size: 25px;
     height: 50px;
     font-weight: normal;
     cursor: pointer;
     border-radius: 50%;
     transition: opacity 0.3s;
-        }
+}
 
-        #scrollTopBtn:hover {
-            background-color: #0056b3;
-        }
-        #features-section ,#arbitration,#princapels,#offers,
-        #conditions,#standards-conditions,#final-offers,#additional{
-            scroll-margin-top: 80px; 
-        }
-    
+#scrollTopBtn:hover {
+    background-color: #0056b3;
+}
+
+#features-section,
+#arbitration,
+#princapels,
+#offers,
+#conditions,
+#standards-conditions,
+#final-offers,
+#additional {
+    scroll-margin-top: 80px;
+}
 
 
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: -350px; 
-            width: 250px;
-            height: 100%;
-            background: var(--main-color);
-            color: white;
-            transition: 0.3s;
-            padding-top: 60px;
-            z-index: 1000;
-        }
-        
-        .close-btn {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-        }
-        
-        .sidebar.active {
-            left: 0;
-        }
-        
-        .sidebar nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .sidebar nav ul li {
-            padding: 15px;
-            border-bottom: 1px solid #444;
-        }
-        
-        .sidebar nav ul li a {
-            color: white;
-            text-decoration: none;
-            display: block;
-        }
-        .sidebar nav ul li i{
-        margin-right: 7px;
-        } 
-        
-        .menu-toggle {
-            display: none;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-            z-index: 1100;
-        }
-        
-        @media (max-width: 1000px) {
-            .menu-toggle {
-                display: block;
-            }
-            .our-navbar .links{
-                display: none;
-            }
-            .our-navbar{
-                width: 100%;
-                position:relative;
-                left: 0;
-                top: 0;
-            }
-            .section-links{
-            }
-            .header h1{
-                margin-top: 20px;
-                font-size: 25px;
-            }
-            .header h3.high-light{
-                width: 90%;
-                font-size: 15px;
-            }
-            .text-content{
-                bottom: 45%;
-                
-            }
-            .features .ask{
-                width:90%;
-                font-size: 18px;
-                padding: 15px;
-            }
-            .features .chance,.footer h3.showed{
-                width:90%;
-                font-size: 18px;
-                padding: 15px;
-                margin-bottom: 15px;
-            }
-            .footer h3.showed{
-                width: 55%;
-                font-size: 18px;
-                padding: 10px;
-                margin-bottom: 15px;
-            }
-            .our-navbar .logo img {
-                width: 167px;
-            }
-            .advertising p {
-                font-size: 16px;
-            }
-            .features ul li {
-               
-                font-size: 20px;
-                margin-right: 14px;
-            }
-            .features h2{
-                font-size: 23px;
-            }
-            .features h2.big{
-                font-size: 26px;
-                margin-top: 20px;
-            }
-            .advertising img{
-                width: 100%;
-            }
-            .menu-toggle {
-                top: 25px;
-            }
-        }
-        @media (min-width: 800px) and (max-width: 1100px) {
-            .our-navbar .links ul li a{
-                font-size: 15px;
-            }
-            .header h3.high-light {
-                width: 90%;
-            }
-            .menu-toggle {
-                top: 25px;
-            }
-        }
-        
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -350px;
+    width: 250px;
+    height: 100%;
+    background: var(--main-color);
+    color: white;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar nav ul li i {
+    margin-right: 7px;
+}
+
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+@media (max-width: 1000px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .our-navbar .links {
+        display: none;
+    }
+
+    .our-navbar {
+        width: 100%;
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    .section-links {}
+
+    .header h1 {
+        margin-top: 20px;
+        font-size: 25px;
+    }
+
+    .header h3.high-light {
+        width: 90%;
+        font-size: 15px;
+    }
+
+    .text-content {
+        bottom: 45%;
+
+    }
+
+    .features .ask {
+        width: 90%;
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .features .chance,
+    .footer h3.showed {
+        width: 90%;
+        font-size: 18px;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .footer h3.showed {
+        width: 55%;
+        font-size: 18px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .our-navbar .logo img {
+        width: 167px;
+    }
+
+    .advertising p {
+        font-size: 16px;
+    }
+
+    .features ul li {
+
+        font-size: 20px;
+        margin-right: 14px;
+    }
+
+    .features h2 {
+        font-size: 23px;
+    }
+
+    .features h2.big {
+        font-size: 26px;
+        margin-top: 20px;
+    }
+
+    .advertising img {
+        width: 100%;
+    }
+
+    .menu-toggle {
+        top: 25px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1100px) {
+    .our-navbar .links ul li a {
+        font-size: 15px;
+    }
+
+    .header h3.high-light {
+        width: 90%;
+    }
+
+    .menu-toggle {
+        top: 25px;
+    }
+}
